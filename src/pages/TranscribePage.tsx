@@ -1,10 +1,10 @@
-import { useAuth } from "../features/auth/useAuth";
-import { TranscribeDetailPanel } from "../features/logs/components/TranscribeDetailPanel";
-import { TranscribeFiltersPanel } from "../features/logs/components/TranscribeFiltersPanel";
-import { TranscribeLogList } from "../features/logs/components/TranscribeLogList";
-import { useTranscribeData } from "../features/logs/hooks/useTranscribeData";
-import { ErrorModal } from "../shared/components/ErrorModal";
-import { QueryErrorNotice } from "../shared/components/QueryErrorNotice";
+import { TranscribeDetailPanel } from "../components/transcribe/TranscribeDetailPanel";
+import { TranscribeFiltersPanel } from "../components/transcribe/TranscribeFiltersPanel";
+import { TranscribeLogList } from "../components/transcribe/TranscribeLogList";
+import { ErrorModal } from "../components/ui/ErrorModal";
+import { QueryErrorNotice } from "../components/ui/QueryErrorNotice";
+import { useTranscribeData } from "../hooks/transcribe/useTranscribeData";
+import { useAuth } from "../hooks/useAuth";
 
 export function TranscribePage() {
   const { signOut } = useAuth();

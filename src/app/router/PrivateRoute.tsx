@@ -1,12 +1,12 @@
 import type { ReactNode } from "react";
 import { Navigate } from "react-router-dom";
-import { useAuth } from "../../features/auth/useAuth";
-import { env } from "../../shared/config/env";
-import { createBasePath } from "../../shared/config/path.ts";
+import { useAuth } from "../../hooks/useAuth";
+import { useEnv } from "../../hooks/useEnv";
 
 export function PrivateRoute({ children }: { children: ReactNode }) {
+  const env = useEnv();
   const { ready, authenticated } = useAuth();
-  const base = createBasePath(env.pathText);
+  const base = env.pathText ? `/${env.pathText}` : "";
 
   if (!ready) {
     return <p>読み込み中...</p>;
