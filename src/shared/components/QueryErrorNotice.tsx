@@ -6,6 +6,9 @@ function toMessage(error: unknown): string | null {
   if (!error) {
     return null;
   }
+  if (typeof error === "string" && error.trim()) {
+    return error;
+  }
   if (error instanceof Error && error.message.trim()) {
     return error.message;
   }

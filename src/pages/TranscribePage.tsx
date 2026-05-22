@@ -3,6 +3,7 @@ import { TranscribeDetailPanel } from "../features/logs/components/TranscribeDet
 import { TranscribeFiltersPanel } from "../features/logs/components/TranscribeFiltersPanel";
 import { TranscribeLogList } from "../features/logs/components/TranscribeLogList";
 import { useTranscribeData } from "../features/logs/hooks/useTranscribeData";
+import { ErrorModal } from "../shared/components/ErrorModal";
 import { QueryErrorNotice } from "../shared/components/QueryErrorNotice";
 
 export function TranscribePage() {
@@ -19,6 +20,13 @@ export function TranscribePage() {
     filters,
     setFilters,
     onSearch,
+    canDownloadCsv,
+    downloadError,
+    closeDownloadError,
+    isDownloadingCalls,
+    isDownloadingTranscriptions,
+    onDownloadCallsCsv,
+    onDownloadTranscriptionsCsv,
     selectedCallSid,
     setSelectedCallSid,
   } = useTranscribeData();
@@ -35,7 +43,7 @@ export function TranscribePage() {
       <QueryErrorNotice errors={[companiesQuery.error, logsQuery.error, detailQuery.error]} />
 
       <section className="content-grid">
-        <article className="panel">
+        <article className="panel panel-log-column">
           <TranscribeFiltersPanel
             companies={companies}
             company={company}
@@ -51,9 +59,27 @@ export function TranscribePage() {
             selectedCallSid={selectedCallSid}
             onSelectCallSid={setSelectedCallSid}
           />
+          <section className="download-actions" aria-label="CSVダウンロード">
+            <button
+              type="button"
+              className="download-button"
+              onClick={() => void onDownloadCallsCsv()}
+              disabled={!canDownloadCsv || isDownloadingCalls || isDownloadingTranscriptions}
+            >
+              {isDownloadingCalls ? "URL生成中..." : "通話ログのダウンロード"}
+            </button>
+            <button
+              type="button"
+              className="download-button"
+              onClick={() => void onDownloadTranscriptionsCsv()}
+              disabled={!canDownloadCsv || isDownloadingCalls || isDownloadingTranscriptions}
+            >
+              {isDownloadingTranscriptions ? "URL生成中..." : "書き起こしログのダウンロード"}
+            </button>
+          </section>
         </article>
 
-        <article className="panel">
+        <article className="panel panel-detail-column">
           <TranscribeDetailPanel
             selectedCallSid={selectedCallSid}
             detail={detail}
@@ -62,6 +88,8 @@ export function TranscribePage() {
           />
         </article>
       </section>
+
+      {downloadError ? <ErrorModal message={downloadError} onClose={closeDownloadError} /> : null}
     </main>
   );
 }
