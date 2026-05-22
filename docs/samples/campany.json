@@ -1,0 +1,900 @@
+{
+    "results": [
+        {
+            "PK": "Company",
+            "SK": "CompanyName#anjo-city-frontdesk",
+            "company_name": "anjo-city-frontdesk",
+            "dev:loop_limit": 4,
+            "dev:voice_recognizer_url": "wss://TwilioAmi-Websockets-686073287.us-east-1.elb.amazonaws.com",
+            "functions_at_completed": [
+                "TwilioCustomParts-trans-cosmos"
+            ],
+            "work_time": {
+                "0": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "1": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "2": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "3": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "4": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "5": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "6": [
+                    "00:00",
+                    "23:59:59"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#autobacs",
+            "company_name": "autobacs",
+            "mail": {
+                "body": "オートバックス ご担当者様\n\nAIコンシェルジュで自動受付をしました。\n以下ご確認ください。\n\n【問い合わせ内容】\n{inquiry}",
+                "send_min_length": 1,
+                "subject": "AIコンシェルジュ 受付結果{time}",
+                "to": [
+                    "tire_outbound@autobacs.com"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#chuden-inbound",
+            "company_name": "chuden-inbound",
+            "dev:channel_limit": 15
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#energia-com",
+            "company_name": "energia-com",
+            "mail": {
+                "body": "ご担当者様\n\nAIコンシェルジュで自動受付をしました。\n以下ご確認ください。\n\n【問い合わせ内容】\n{inquiry}",
+                "subject": "エネコムデモ AIコンシェルジュ受付結果{time}",
+                "to": [
+                    "solution-ai@enecom.co.jp",
+                    "w-yoshino@tactinc.jp"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#everlife",
+            "company_name": "everlife",
+            "dev:error_limit": 0,
+            "dev:voice_recognizer_url": "wss://TwilioAmi-Websockets-686073287.us-east-1.elb.amazonaws.com",
+            "functions_at_completed": [
+                "EverlifeTwilioCustomParts"
+            ]
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#everlife-order",
+            "company_name": "everlife-order",
+            "dev:error_limit": 1,
+            "dev:loop_limit": 2,
+            "functions_at_completed": []
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#frontdesk",
+            "company_name": "frontdesk",
+            "dev:channel_limit": 4
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#heart-international",
+            "company_name": "heart-international",
+            "dev:loop_limit": 70,
+            "dev:voice_recognizer_url": "wss://TwilioAmi-Websockets-686073287.us-east-1.elb.amazonaws.com"
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#hiroshima-city",
+            "company_name": "hiroshima-city",
+            "dev:channel_limit": 1
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#hokkaido",
+            "company_name": "hokkaido",
+            "dev:channel_limit": 1
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#jaxa",
+            "company_name": "jaxa",
+            "mail": {
+                "body": "お疲れ様です。以下の通り入電がありました。\n\nステータス:{status}\n【問い合わせ内容】\n{inquiry}",
+                "send_min_length": 1,
+                "subject": "JAXA AIC受付結果{time}",
+                "to": [
+                    "tactoki_staff@tactinc.jp"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#jr-kyushu",
+            "company_name": "jr-kyushu",
+            "dev:channel_limit": 3,
+            "functions_at_completed": [
+                "JrKyushuTwilioCustom"
+            ]
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#kaiteki-seikatsu",
+            "company_name": "kaiteki-seikatsu"
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#kakuyasu",
+            "company_name": "kakuyasu",
+            "dev:loop_limit": 30
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#kawagoe-city",
+            "company_name": "kawagoe-city",
+            "dev:loop_limit": 999,
+            "dev:voice_recognizer_url": "wss://TwilioAmi-Websockets-686073287.us-east-1.elb.amazonaws.com",
+            "work_time": {
+                "0": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "1": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "2": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "3": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "4": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "5": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "6": [
+                    "00:00",
+                    "23:59:59"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#keizai-sangyo",
+            "company_name": "keizai-sangyo",
+            "dev:loop_limit": 999,
+            "dev:voice_recognizer_url": "wss://TwilioAmi-Websockets-686073287.us-east-1.elb.amazonaws.com",
+            "functions_at_completed": [
+                "TwilioCustomParts-Takagi"
+            ],
+            "work_time": {
+                "0": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "1": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "2": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "3": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "4": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "5": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "6": [
+                    "00:00",
+                    "23:59:59"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#kitakyushu-city-frontdesk",
+            "company_name": "kitakyushu-city-frontdesk"
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#kyusai",
+            "company_name": "kyusai"
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#kyusai-sms",
+            "company_name": "kyusai-sms",
+            "dev:channel_limit": 5,
+            "functions_at_completed": [
+                "KyusaiTwilioCustomParts"
+            ]
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#kyusai-sms2",
+            "company_name": "kyusai-sms2",
+            "functions_at_completed": [
+                "KyusaiTwilioCustomParts"
+            ]
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#kyusai-snatch",
+            "company_name": "kyusai-snatch",
+            "functions_at_completed": [
+                "KyusaiTwilioCustomParts"
+            ]
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#loop-test",
+            "company_name": "loop-test",
+            "dev:loop_limit": 70
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#machida-city-frontdesk",
+            "company_name": "machida-city-frontdesk",
+            "dev:channel_limit": 1
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#mitsuba-com",
+            "company_name": "mitsuba-com",
+            "dev:channel_limit": 3,
+            "mail": {
+                "body": "みつばコミュニティ\nご担当者様\n\nAIコンシェルジュで自動受付をしました。\n以下ご確認ください。\n\n【問い合わせ内容】\n{inquiry}",
+                "send_min_length": 2,
+                "subject": "AIコンシェルジュ 受付結果{time}",
+                "to": [
+                    "gyoumu@mitsuba-c.jp"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#mitsubishi-tagalog",
+            "company_name": "mitsubishi-tagalog",
+            "dev:voice_generator": "https://rc6aihuixmb7vhawhz4gfih4jy0asirh.lambda-url.us-east-1.on.aws",
+            "dev:voice_recognizer_url": "wss://3.225.188.157",
+            "mail": {
+                "body": "各位\n\nお疲れ様です。\n代表受けるくんです。\n代表電話に入電がございましたので、以下ご確認ください。\n\n【問い合わせ内容】\n{inquiry}",
+                "subject": "タガログ語AIコンシェルジュ受付結果{time}",
+                "to": [
+                    "k-nishizawa@tactinc.jp"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#nagoya-call",
+            "company_name": "nagoya-call",
+            "dev:channel_limit": 4
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#nagoya-city",
+            "company_name": "nagoya-city",
+            "dev:voice_recognizer_url": "wss://TwilioAmi-Websockets-686073287.us-east-1.elb.amazonaws.com",
+            "work_time": {
+                "0": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "1": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "2": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "3": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "4": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "5": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "6": [
+                    "00:00",
+                    "23:59:59"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#national-tax-agency",
+            "company_name": "national-tax-agency",
+            "dev:error_limit": 999,
+            "dev:loop_limit": 999,
+            "dev:voice_generator": "https://xklpqi6xm9.execute-api.ap-northeast-1.amazonaws.com/Prod/Voice/Risa",
+            "dev:voice_recognizer_url": "wss://twilio-stream-vtokyo.tactinc.jp",
+            "functions_at_completed": [
+                "TestNationalTaxAgencyTwilioCustomParts-SMS"
+            ]
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#next-stage",
+            "company_name": "next-stage"
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#nihon-chokuhan",
+            "company_name": "nihon-chokuhan",
+            "dev:channel_limit": 5,
+            "dev:error_limit": 1
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#nihon-chokuhan-catalog",
+            "company_name": "nihon-chokuhan-catalog",
+            "dev:channel_limit": 5,
+            "dev:error_limit": 1
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#ntt-west-demo",
+            "company_name": "ntt-west-demo",
+            "mail": {
+                "body": "ご担当者様\n\nAIコンシェルジュで自動受付をしました。\n以下ご確認ください。\n\n【問い合わせ内容】\n{inquiry}",
+                "subject": "NTT西デモ AIコンシェルジュ受付結果{time}",
+                "to": [
+                    "ai.concierge.demo@gmail.com"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#operationalprojecttest",
+            "company_name": "operationalprojecttest",
+            "work_time": {
+                "0": [
+                    "09:00",
+                    "15:00"
+                ],
+                "1": [
+                    "09:00",
+                    "15:00"
+                ],
+                "2": [
+                    "09:00",
+                    "15:00"
+                ],
+                "3": [
+                    "09:00",
+                    "15:00"
+                ],
+                "4": [
+                    "09:00",
+                    "15:00"
+                ],
+                "5": [
+                    "00:00",
+                    "00:00"
+                ],
+                "6": [
+                    "00:00",
+                    "00:00"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#oriental-clinic",
+            "company_name": "oriental-clinic",
+            "dev:channel_limit": 1
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#otsu-city",
+            "company_name": "otsu-city",
+            "dev:channel_limit": 3
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#plana",
+            "company_name": "plana",
+            "dev:channel_limit": 4,
+            "functions_at_completed": [],
+            "work_time": {
+                "0": [
+                    "09:00",
+                    "18:00"
+                ],
+                "1": [
+                    "09:00",
+                    "18:00"
+                ],
+                "2": [
+                    "09:00",
+                    "18:00"
+                ],
+                "3": [
+                    "09:00",
+                    "18:00"
+                ],
+                "4": [
+                    "09:00",
+                    "18:00"
+                ],
+                "5": [
+                    "09:00",
+                    "18:00"
+                ],
+                "6": [
+                    "09:00",
+                    "18:00"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#plana2",
+            "company_name": "plana2",
+            "dev:channel_limit": 4,
+            "functions_at_completed": [
+                "PlanaTwilioCustomParts"
+            ],
+            "work_time": {
+                "0": [
+                    "09:00",
+                    "18:00"
+                ],
+                "1": [
+                    "09:00",
+                    "18:00"
+                ],
+                "2": [
+                    "09:00",
+                    "18:00"
+                ],
+                "3": [
+                    "09:00",
+                    "18:00"
+                ],
+                "4": [
+                    "09:00",
+                    "18:00"
+                ],
+                "5": [
+                    "09:00",
+                    "18:00"
+                ],
+                "6": [
+                    "09:00",
+                    "18:00"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#premium-water",
+            "company_name": "premium-water"
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#qtnet",
+            "company_name": "qtnet",
+            "dev:channel_limit": 2,
+            "dev:error_limit": 1,
+            "functions_at_completed": [
+                "QtnetTwilioCustomParts"
+            ]
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#sanjou-city",
+            "company_name": "sanjou-city",
+            "dev:channel_limit": 2,
+            "functions_at_completed": [
+                "SanjouCityTwilioCustom"
+            ],
+            "work_time": {
+                "0": [
+                    "09:00",
+                    "17:00"
+                ],
+                "1": [
+                    "09:00",
+                    "17:00"
+                ],
+                "2": [
+                    "09:00",
+                    "17:00"
+                ],
+                "3": [
+                    "09:00",
+                    "17:00"
+                ],
+                "4": [
+                    "09:00",
+                    "17:00"
+                ],
+                "5": [
+                    "00:00",
+                    "00:00"
+                ],
+                "6": [
+                    "00:00",
+                    "00:00"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#sanjou-city-frontdesk",
+            "company_name": "sanjou-city-frontdesk",
+            "dev:channel_limit": 1
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#shabondama",
+            "company_name": "shabondama",
+            "dev:channel_limit": 2,
+            "dev:loop_limit": 70,
+            "work_time": {
+                "0": [
+                    "08:30",
+                    "17:30"
+                ],
+                "1": [
+                    "08:30",
+                    "17:30"
+                ],
+                "2": [
+                    "08:30",
+                    "17:30"
+                ],
+                "3": [
+                    "08:30",
+                    "17:30"
+                ],
+                "4": [
+                    "08:30",
+                    "17:30"
+                ],
+                "5": [
+                    "08:30",
+                    "17:30"
+                ],
+                "6": [
+                    "08:30",
+                    "17:30"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#shihen-tech",
+            "company_name": "shihen-tech",
+            "mail": {
+                "body": "ご担当者様\n\nAIコンシェルジュで自動受付をしました。\n以下ご確認ください。\n\n【問い合わせ内容】\n{inquiry}",
+                "subject": "四変テックAIコンシェルジュLITE受付結果{time}",
+                "to": [
+                    "k-nishizawa@tactinc.jp"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#shinnihon-seiyaku",
+            "company_name": "shinnihon-seiyaku",
+            "functions_at_completed": []
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#shinnihon-seiyaku-inactive",
+            "company_name": "shinnihon-seiyaku-inactive"
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#shinnihon-seiyaku-snatch",
+            "company_name": "shinnihon-seiyaku-snatch"
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#shinnihon-seiyaku-whisper",
+            "company_name": "shinnihon-seiyaku-whisper"
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#stefany",
+            "company_name": "stefany",
+            "functions_at_completed": [
+                "StefanyTwilioCustom"
+            ]
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#synapse-one",
+            "company_name": "synapse-one",
+            "mail": {
+                "body": "ご担当者様\n\nAIコンシェルジュで自動受付をしました。\n以下ご確認ください。\n\n【問い合わせ内容】\n{inquiry}",
+                "subject": "AIコンシェルジュ受付結果{time}",
+                "to": [
+                    "mkatagiri@synapse-one.jp",
+                    "mail@synapse-one.jp",
+                    "s-hasegawa@tactinc.jp",
+                    "k-mimura@tactinc.jp",
+                    "k-nishizawa@tactinc.jp"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#synapse-shopping",
+            "company_name": "synapse-shopping",
+            "mail": {
+                "body": "ご担当者様\n\nAIコンシェルジュで自動受付をしました。\n以下ご確認ください。\n\n【問い合わせ内容】\n{inquiry}",
+                "subject": "AIコンシェルジュ 通販デモ受付結果{time}",
+                "to": [
+                    "mkatagiri@synapse-one.jp"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#tact",
+            "company_name": "tact",
+            "work_time": {
+                "0": [
+                    "10:00",
+                    "22:00"
+                ],
+                "1": [
+                    "10:00",
+                    "22:50"
+                ],
+                "2": [
+                    "10:00",
+                    "22:50"
+                ],
+                "3": [
+                    "10:00",
+                    "22:50"
+                ],
+                "4": [
+                    "10:00",
+                    "22:50"
+                ],
+                "5": [
+                    "00:00",
+                    "00:00"
+                ],
+                "6": [
+                    "00:00",
+                    "00:00"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#tact-develop",
+            "company_name": "tact-develop",
+            "dev:voice_recognizer_url": "wss://twilio-stream-vtokyo.tactinc.jp",
+            "mail": {
+                "body": "テストです。\n\n【問い合わせ内容】\n{inquiry}",
+                "send_min_length": 1,
+                "subject": "AIC受付結果 {time}",
+                "to": [
+                    "t-demizu@tactinc.jp"
+                ]
+            },
+            "work_time": {
+                "0": [
+                    "10:00",
+                    "19:00"
+                ],
+                "1": [
+                    "10:00",
+                    "19:50"
+                ],
+                "2": [
+                    "10:00",
+                    "19:50"
+                ],
+                "3": [
+                    "10:00",
+                    "19:50"
+                ],
+                "4": [
+                    "10:00",
+                    "19:50"
+                ],
+                "5": [
+                    "00:00",
+                    "00:00"
+                ],
+                "6": [
+                    "00:00",
+                    "00:00"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#tact-thermo-gw",
+            "company_name": "tact-thermo-gw",
+            "mail": {
+                "body": "各位\n\nお疲れ様です。AIコンシェルジュでGW窓口の受付をしました。\n以下ご確認ください。\n\n【問い合わせ内容】\n{inquiry}",
+                "send_min_length": 1,
+                "subject": "サーモGW窓口 AIC受付結果 {time}",
+                "to": [
+                    "aic_thermography@tactinc.jp",
+                    "k-nishizawa@tactinc.jp"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#takagi",
+            "company_name": "takagi",
+            "dev:loop_limit": 9999,
+            "dev:voice_recognizer_url": "wss://TwilioAmi-Websockets-686073287.us-east-1.elb.amazonaws.com",
+            "functions_at_completed": [
+                "TwilioCustomParts-Keizai-Sangyo-SMS"
+            ],
+            "work_time": {
+                "0": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "1": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "2": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "3": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "4": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "5": [
+                    "00:00",
+                    "23:59:59"
+                ],
+                "6": [
+                    "00:00",
+                    "23:59:59"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#takamatsu-city",
+            "company_name": "takamatsu-city",
+            "mail": {
+                "body": "各位\n\nお疲れ様です。\n代表受けるくんです。\n代表電話に入電がございましたので、以下ご確認ください。\n\n【問い合わせ内容】\n{inquiry}",
+                "subject": "高松市AIコンシェルジュ受付結果{time}",
+                "to": []
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#test_tact",
+            "company_name": "test_tact"
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#tokai-tv",
+            "company_name": "tokai-tv",
+            "dev:channel_limit": 5
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#trans-cosmos",
+            "company_name": "trans-cosmos",
+            "dev:channel_limit": 1,
+            "dev:loop_limit": 4,
+            "dev:voice_recognizer_url": "wss://TwilioAmi-Websockets-686073287.us-east-1.elb.amazonaws.com",
+            "functions_at_completed": [
+                "TwilioCustomParts-trans-cosmos"
+            ]
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#trans-cosmos-unlock",
+            "company_name": "trans-cosmos-unlock",
+            "dev:channel_limit": 1,
+            "dev:loop_limit": 4,
+            "dev:voice_recognizer_url": "wss://TwilioAmi-Websockets-686073287.us-east-1.elb.amazonaws.com",
+            "functions_at_completed": [
+                "TwilioCustomParts-trans-cosmos-unlock"
+            ]
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#transcosmos-lock",
+            "company_name": "transcosmos-lock",
+            "dev:channel_limit": 1,
+            "functions_at_completed": [
+                "TranscosmosLockTwilioCustom"
+            ]
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#transcosmos-ndw",
+            "company_name": "transcosmos-ndw",
+            "dev:channel_limit": 1,
+            "mail": {
+                "body": "NTTデータウェーブ　ヘルプデスク\nご担当者様\n\nAIコンシェルジュで自動受付をしました。\n以下ご確認ください。\n\n【問い合わせ内容】\n{inquiry}",
+                "subject": "AIコンシェルジュ 受付結果{time}",
+                "to": [
+                    "svmg.wpmhelp@nttd-wave.com"
+                ]
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#usen-request",
+            "company_name": "usen-request"
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#yoshikawa-kinzoku",
+            "company_name": "yoshikawa-kinzoku",
+            "mail": {
+                "body": "ご担当者様\n\nAIコンシェルジュで自動受付をしました。\n以下ご確認ください。\n\n【問い合わせ内容】\n{inquiry}",
+                "subject": "吉川金属商事 AIコンシェルジュ受付結果{time}",
+                "to": []
+            }
+        },
+        {
+            "PK": "Company",
+            "SK": "CompanyName#yushin",
+            "company_name": "yushin",
+            "dev:channel_limit": 1,
+            "functions_at_completed": [
+                "YushinTwilioCustomParts"
+            ]
+        }
+    ]
+}

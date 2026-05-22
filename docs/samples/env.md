@@ -1,0 +1,9 @@
+AWS_PROFILE=dev
+VITE_PATH_TEXT=Transcribe
+VITE_AUTH_REGION=ap-northeast-1
+VITE_AUTH_USER_POOL_ID=ap-northeast-1_BLB8L3DYQ
+VITE_AUTH_USER_POOL_WEB_CLIENT_ID=4ncvaeebej54oirb8fh6ve9rej
+VITE_AUTH_COOKIE_STORAGE_DOMAIN=aic3.tact-dev.jp
+VITE_API_BASE_URL=https://flow.tact-dev.jp
+VITE_PROXY_BASE_URL=https://gwzybhh623.execute-api.ap-northeast-1.amazonaws.com/dev
+CLOUDFRONT_DISTRIBUTION_ID=E39E2GQS7YYP0O

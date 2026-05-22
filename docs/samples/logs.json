@@ -1,0 +1,524 @@
+{
+    "items": [
+        {
+            "callSid": "CA5b3f09d2b25e179296ce218c4c58e06e",
+            "company": "takagi",
+            "startedAt": "2026-05-15T18:57:54+09:00",
+            "callFrom": "+818037027636",
+            "minutes": 1,
+            "status": "途中切断",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA088ec7d7898a972a14de450ccf2ab3b3",
+            "company": "takagi",
+            "startedAt": "2026-05-08T11:15:54+09:00",
+            "callFrom": "+817015631968",
+            "minutes": 1,
+            "status": "冒頭切断",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAa735356bda2f0ebea7ffe224f769ffba",
+            "company": "takagi",
+            "startedAt": "2026-05-08T11:11:27+09:00",
+            "callFrom": "+817015631968",
+            "minutes": 4,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA68643b7e2bfe7c8044579d73ed9942e4",
+            "company": "takagi",
+            "startedAt": "2026-05-08T11:08:30+09:00",
+            "callFrom": "+817015631968",
+            "minutes": 3,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAc8be3ee4f620bf6e76babf1cc1f69937",
+            "company": "takagi",
+            "startedAt": "2026-05-08T11:04:37+09:00",
+            "callFrom": "+817015631968",
+            "minutes": 4,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA3d7ce7672d9fc1e02c45d6e9c593799e",
+            "company": "takagi",
+            "startedAt": "2026-05-07T19:14:15+09:00",
+            "callFrom": "+818037027636",
+            "minutes": 5,
+            "status": "SMS案内",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA2c4b4945cc89186ad6915b68fe157072",
+            "company": "takagi",
+            "startedAt": "2026-05-07T19:12:37+09:00",
+            "callFrom": "+818037027636",
+            "minutes": 2,
+            "status": "特定NG時間外",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA018f1bdf7b67edde0905f830f31664e5",
+            "company": "takagi",
+            "startedAt": "2026-05-07T19:08:54+09:00",
+            "callFrom": "+818037027636",
+            "minutes": 4,
+            "status": "SMS案内",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAd6180a525a8d31f425a17cc4a28004d3",
+            "company": "takagi",
+            "startedAt": "2026-05-01T17:08:34+09:00",
+            "callFrom": "+818034897459",
+            "minutes": 5,
+            "status": "SMS送信",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA75cc6faf54b8edf83bb1027ef81ace6d",
+            "company": "takagi",
+            "startedAt": "2026-05-01T17:06:24+09:00",
+            "callFrom": "+818034897459",
+            "minutes": 2,
+            "status": "受付NG時間内",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA5c7671eb6b960e518ea39d560c5c7d5e",
+            "company": "takagi",
+            "startedAt": "2026-05-01T17:04:15+09:00",
+            "callFrom": "+818034897459",
+            "minutes": 3,
+            "status": "受付NG時間内",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAb1a543f32b78fb1200638c82902dd6d4",
+            "company": "takagi",
+            "startedAt": "2026-05-01T17:03:19+09:00",
+            "callFrom": "+818034897459",
+            "minutes": 1,
+            "status": "冒頭切断",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA051fe037e67fc15920744f92d607b4e7",
+            "company": "takagi",
+            "startedAt": "2026-05-01T12:42:11+09:00",
+            "callFrom": "+818034897459",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA61e69dba8c1b8428b932ff2f1fce925d",
+            "company": "takagi",
+            "startedAt": "2026-05-01T12:41:27+09:00",
+            "callFrom": "+818034897459",
+            "minutes": 1,
+            "status": "途中切断1",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA11925b0184542e920febae48df3c5d00",
+            "company": "takagi",
+            "startedAt": "2026-04-28T15:03:39+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 1,
+            "status": "冒頭切断",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA5b905737311c0e8da80f6dd23730ba93",
+            "company": "takagi",
+            "startedAt": "2026-04-28T15:02:30+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 1,
+            "status": "冒頭切断",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA776f6dbc99a6929ae6a554a8988d0383",
+            "company": "takagi",
+            "startedAt": "2026-04-28T15:00:30+09:00",
+            "callFrom": "+19123912720",
+            "minutes": 1,
+            "status": "冒頭切断",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA51f02259ce117184da445268195a7e47",
+            "company": "takagi",
+            "startedAt": "2026-04-28T13:30:32+09:00",
+            "callFrom": "+19123912720",
+            "minutes": 3,
+            "status": "切断(交換変更日)",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAf6407a5c9ebba063d8b8607305c7dd1a",
+            "company": "takagi",
+            "startedAt": "2026-04-28T13:25:52+09:00",
+            "callFrom": "+19123912720",
+            "minutes": 3,
+            "status": "切断(交換変更日)",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAdc3fd1e9e1964e0e6b54d2ccec9d794f",
+            "company": "takagi",
+            "startedAt": "2026-04-28T13:20:45+09:00",
+            "callFrom": "+19123912720",
+            "minutes": 6,
+            "status": "SMS案内",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAdab59b8e7c903893285f2fbdd282f2bb",
+            "company": "takagi",
+            "startedAt": "2026-04-28T13:12:49+09:00",
+            "callFrom": "+19123912720",
+            "minutes": 1,
+            "status": "冒頭切断",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA466e6aebb1a4f56ee9510b5d1b18e352",
+            "company": "takagi",
+            "startedAt": "2026-04-28T12:05:40+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 1,
+            "status": "途中切断",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA1daef778041daff2a7b7f65ecaab3759",
+            "company": "takagi",
+            "startedAt": "2026-04-27T12:46:26+09:00",
+            "callFrom": "+8111111111",
+            "minutes": 4,
+            "status": "SMS案内",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA78a0b95d9316a2629b25019f9094fea5",
+            "company": "takagi",
+            "startedAt": "2026-04-24T14:49:22+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 0,
+            "status": "通話終了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA700a2849488481266b8b4bc0e0cd2984",
+            "company": "takagi",
+            "startedAt": "2026-04-24T10:11:23+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA042d806af60aa0a329e121db201c7ace",
+            "company": "takagi",
+            "startedAt": "2026-04-24T10:08:54+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 3,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAd8938b89ebb4932d9d7c51db4a694ab5",
+            "company": "takagi",
+            "startedAt": "2026-04-23T14:56:14+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA27e0066b37902e2a6a29c1f6e2d3f415",
+            "company": "takagi",
+            "startedAt": "2026-04-23T14:54:28+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA2e47cb63d513b972e27372e20fe4c7bc",
+            "company": "takagi",
+            "startedAt": "2026-04-23T14:52:32+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA4f622815d809643b3604d4bd0cecd11b",
+            "company": "takagi",
+            "startedAt": "2026-04-23T14:51:09+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAba09c20cadb115159107d22595a09b5e",
+            "company": "takagi",
+            "startedAt": "2026-04-23T14:49:45+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAf23862afcc0eddc680dd67988f02f655",
+            "company": "takagi",
+            "startedAt": "2026-04-23T13:16:17+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA53ec039f2aea308b93ee3ee69a9b2a73",
+            "company": "takagi",
+            "startedAt": "2026-04-23T13:13:07+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 3,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAabe9f5b00938661970c83d80111699f5",
+            "company": "takagi",
+            "startedAt": "2026-04-23T13:11:39+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAd66862e9117be1165129dcee90b08ad9",
+            "company": "takagi",
+            "startedAt": "2026-04-23T13:08:42+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA11987adfc114629c1c60ee6d01ccc723",
+            "company": "takagi",
+            "startedAt": "2026-04-23T13:07:09+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA3382b248c22fa03e4f7c54d99dc73d5b",
+            "company": "takagi",
+            "startedAt": "2026-04-23T13:03:24+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA25c4f6e92de322f4dbc858f8a652a0c2",
+            "company": "takagi",
+            "startedAt": "2026-04-23T12:55:44+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAc8df7d233b479c990b03c62425dc0c78",
+            "company": "takagi",
+            "startedAt": "2026-04-23T12:51:58+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAa55f7da13b1a6e1118cd17ca28af7eb8",
+            "company": "takagi",
+            "startedAt": "2026-04-23T12:49:59+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAbbbd6d9dd0690980781277a21c89bb70",
+            "company": "takagi",
+            "startedAt": "2026-04-23T12:44:02+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 5,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAb199e09dbe3ad370f75f5f98df876244",
+            "company": "takagi",
+            "startedAt": "2026-04-23T12:39:27+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAff0ce7aad7efc77a29e48d93f231a8b1",
+            "company": "takagi",
+            "startedAt": "2026-04-23T12:37:35+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 2,
+            "status": "対応完了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA41788aa9ec64e9a0113e757343867243",
+            "company": "takagi",
+            "startedAt": "2026-04-23T12:27:11+09:00",
+            "callFrom": "+19123912720",
+            "minutes": 1,
+            "status": "途中切断1",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA47439bf9b949bbe578beb45d8bd7e3e0",
+            "company": "takagi",
+            "startedAt": "2026-04-22T12:41:12+09:00",
+            "callFrom": "+819078252706",
+            "minutes": 1,
+            "status": "冒頭切断",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA1da8a182ffaf0139e206197e0c9b294d",
+            "company": "takagi",
+            "startedAt": "2026-04-22T12:40:53+09:00",
+            "callFrom": "+819078252706",
+            "minutes": 1,
+            "status": "冒頭切断",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA43ffaa7b8da598d3028ae6e890fcea20",
+            "company": "takagi",
+            "startedAt": "2026-04-22T12:39:47+09:00",
+            "callFrom": "+819078252706",
+            "minutes": 0,
+            "status": "通話終了",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA66fa14a0b3fbb4f2546b62cb7c5105ad",
+            "company": "takagi",
+            "startedAt": "2026-04-22T12:32:26+09:00",
+            "callFrom": "+819078252706",
+            "minutes": 1,
+            "status": "冒頭切断",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA2105ba4a9798436dd3000fc325584802",
+            "company": "takagi",
+            "startedAt": "2026-04-22T12:31:41+09:00",
+            "callFrom": "+819078252706",
+            "minutes": 1,
+            "status": "冒頭切断",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAa031c2aef601782d2eecc68caf699483",
+            "company": "takagi",
+            "startedAt": "2026-04-22T12:18:47+09:00",
+            "callFrom": "+817015629607",
+            "minutes": 1,
+            "status": "冒頭切断",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CA7cfd26dbf1a122d1fabc19f3ffc7cb84",
+            "company": "takagi",
+            "startedAt": "2026-04-20T14:03:00+09:00",
+            "callFrom": "+19123912720",
+            "minutes": 10,
+            "status": "",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        },
+        {
+            "callSid": "CAcd5d1928951aa6fd95514ceb08e01ed5",
+            "company": "takagi",
+            "startedAt": "2026-04-20T13:44:06+09:00",
+            "callFrom": "+19123912720",
+            "minutes": 5,
+            "status": "SMS案内",
+            "reviewStatus": "unreviewed",
+            "inputPreview": ""
+        }
+    ]
+}
