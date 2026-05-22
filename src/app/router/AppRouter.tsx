@@ -2,10 +2,11 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { SignInPage } from "../../pages/SignInPage";
 import { TranscribePage } from "../../pages/TranscribePage";
 import { env } from "../../shared/config/env";
+import { createBasePath } from "../../shared/config/path.ts";
 import { PrivateRoute } from "./PrivateRoute";
 
 export function AppRouter() {
-  const base = env.pathText ? `/${env.pathText}` : "";
+  const base = createBasePath(env.pathText);
 
   return (
     <BrowserRouter>

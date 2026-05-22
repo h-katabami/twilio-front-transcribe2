@@ -1,12 +1,13 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig, loadEnv } from "vite";
+import { createBasePath, normalizePathSegment } from "./src/shared/config/path.ts";
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, ".", "");
-  const pathText = String(env.VITE_PATH_TEXT || "").replace(/^\/+|\/+$/g, "");
+  const pathText = normalizePathSegment(env.VITE_PATH_TEXT);
 
   return {
-    base: pathText ? `/${pathText}/` : "/",
+    base: `${createBasePath(pathText)}/`,
     plugins: [react()],
   };
 });

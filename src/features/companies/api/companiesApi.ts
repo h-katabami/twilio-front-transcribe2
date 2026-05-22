@@ -1,4 +1,4 @@
-import type { CompaniesResponseDto } from "../../../entities/transcribe/types";
+import type { CompaniesResponseDto } from "../../../entities/transcribe/dto.ts";
 import { requestJson } from "../../../shared/api/httpClient";
 import { env } from "../../../shared/config/env";
 
