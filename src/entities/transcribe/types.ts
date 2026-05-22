@@ -14,6 +14,7 @@ export type LogSummaryDto = {
   callFrom: string;
   minutes: number;
   status: string;
+  memo?: string;
   inputPreview: string;
 };
 
@@ -96,6 +97,7 @@ export type LogSummary = {
   callFrom: string;
   minutes: number;
   status: string;
+  memo: string;
   inputPreview: string;
 };
 
