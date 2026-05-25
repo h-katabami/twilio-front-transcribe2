@@ -16,6 +16,10 @@ type LogsResponsePayload = {
   items?: LogSummaryPayload[];
 };
 
+type StatusCheckpointsResponsePayload = {
+  items?: string[];
+};
+
 type UserInputPayload = {
   question_id: string;
   input: string;
@@ -161,6 +165,7 @@ function createLogsParams(company: string, filters: LogFilters): URLSearchParams
   const params = new URLSearchParams({ company });
   if (filters.startDate) params.set("startDate", filters.startDate);
   if (filters.endDate) params.set("endDate", filters.endDate);
+  if (filters.statusCheckpoint) params.set("statusCheckpoint", filters.statusCheckpoint);
   return params;
 }
 
@@ -224,10 +229,20 @@ export function useApiProxy() {
     return extractDownloadUrl(payload);
   };
 
+  const fetchStatusCheckpoints = async (token: string | null, company: string): Promise<string[]> => {
+    const params = new URLSearchParams({ company });
+    const data = await requestJson<StatusCheckpointsResponsePayload>(
+      serviceUrl(`status-checkpoints?${params.toString()}`),
+      { token },
+    );
+    return Array.isArray(data.items) ? data.items.map((value) => String(value)) : [];
+  };
+
   return {
     fetchLogs,
     fetchLogDetail,
     fetchCallsCsvDownloadUrl,
     fetchTranscriptionsCsvDownloadUrl,
+    fetchStatusCheckpoints,
   };
 }

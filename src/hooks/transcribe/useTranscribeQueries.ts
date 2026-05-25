@@ -20,6 +20,20 @@ export function useCompaniesQuery(getToken: () => Promise<string | null>) {
   });
 }
 
+export function useStatusCheckpointsQuery(
+  getToken: () => Promise<string | null>,
+  company: string,
+) {
+  const { fetchStatusCheckpoints } = useApiProxy();
+
+  return useQuery({
+    queryKey: ["statusCheckpoints", company] as const,
+    queryFn: async () => fetchStatusCheckpoints(await getToken(), company),
+    enabled: Boolean(company),
+    staleTime: 5 * 60 * 1000,
+  });
+}
+
 export function useTranscribeQueries(params: UseTranscribeQueriesParams) {
   const { fetchLogs, fetchLogDetail } = useApiProxy();
   const { getToken, appliedCompany, appliedFilters, selectedCallSid } = params;
@@ -27,7 +41,7 @@ export function useTranscribeQueries(params: UseTranscribeQueriesParams) {
   const hasSelectedCallSid = Boolean(selectedCallSid);
 
   const logsQuery = useQuery({
-    queryKey: ["logs", appliedCompany, appliedFilters.startDate, appliedFilters.endDate] as const,
+    queryKey: ["logs", appliedCompany, appliedFilters.startDate, appliedFilters.endDate, appliedFilters.statusCheckpoint] as const,
     queryFn: async () => fetchLogs(await getToken(), appliedCompany, appliedFilters),
     enabled: hasAppliedCompany,
   });

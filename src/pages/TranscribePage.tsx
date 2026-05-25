@@ -11,6 +11,8 @@ export function TranscribePage() {
   const {
     companies,
     companiesQuery,
+    statusCheckpoints,
+    statusCheckpointsQuery,
     logs,
     logsQuery,
     detail,
@@ -40,12 +42,14 @@ export function TranscribePage() {
         <button type="button" onClick={() => void signOut()}>サインアウト</button>
       </header>
 
-      <QueryErrorNotice errors={[companiesQuery.error, logsQuery.error, detailQuery.error]} />
+      <QueryErrorNotice errors={[companiesQuery.error, statusCheckpointsQuery.error, logsQuery.error, detailQuery.error]} />
 
       <section className="content-grid">
         <article className="panel panel-log-column">
           <TranscribeFiltersPanel
             companies={companies}
+            statusCheckpoints={statusCheckpoints}
+            isLoadingStatusCheckpoints={statusCheckpointsQuery.isLoading || statusCheckpointsQuery.isFetching}
             company={company}
             filters={filters}
             onCompanyChange={onCompanyChange}

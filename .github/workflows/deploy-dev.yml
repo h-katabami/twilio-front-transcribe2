@@ -43,14 +43,14 @@ jobs:
               echo "APP_ENV=dev" >> "$GITHUB_ENV"
               echo "AWS_REGION=ap-northeast-1" >> "$GITHUB_ENV"
               echo "AWS_ACCOUNT_ID=237710157750" >> "$GITHUB_ENV"
-              echo "STACK_NAME=twilio-front-transcribe-dev" >> "$GITHUB_ENV"
+              echo "STACK_NAME=twilio-front-transcribe" >> "$GITHUB_ENV"
               echo "FRONT_PATH=Transcribe" >> "$GITHUB_ENV"
               ;;
             prod)
               echo "APP_ENV=prod" >> "$GITHUB_ENV"
               echo "AWS_REGION=us-east-1" >> "$GITHUB_ENV"
               echo "AWS_ACCOUNT_ID=353666332910" >> "$GITHUB_ENV"
-              echo "STACK_NAME=twilio-front-transcribe-prod" >> "$GITHUB_ENV"
+              echo "STACK_NAME=twilio-front-transcribe" >> "$GITHUB_ENV"
               echo "FRONT_PATH=Transcribe" >> "$GITHUB_ENV"
               ;;
             *)
@@ -150,7 +150,7 @@ jobs:
         run: |
           sam deploy \
             --stack-name "$STACK_NAME" \
-            --capabilities CAPABILITY_IAM \
+            --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM \
             --resolve-s3 \
             --region "$AWS_REGION" \
             --no-confirm-changeset \

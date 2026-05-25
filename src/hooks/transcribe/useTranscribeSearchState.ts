@@ -15,6 +15,7 @@ function createInitialFilters(): LogFilters {
   return {
     startDate: value,
     endDate: value,
+    statusCheckpoint: "",
   };
 }
 
@@ -42,6 +43,10 @@ export function useTranscribeSearchState(companies: string[]): UseTranscribeSear
 
   const onCompanyChange = (nextCompany: string) => {
     setCompany(nextCompany);
+    setDraftFilters((current) => ({
+      ...current,
+      statusCheckpoint: "",
+    }));
     setAppliedCompany("");
   };
 

@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useApiProxy } from "../useApiProxy";
 import { useAuth } from "../useAuth";
-import { useCompaniesQuery, useTranscribeQueries } from "./useTranscribeQueries";
+import { useCompaniesQuery, useStatusCheckpointsQuery, useTranscribeQueries } from "./useTranscribeQueries";
 import { useTranscribeSearchState } from "./useTranscribeSearchState";
+
+const EMPTY_STATUS_CHECKPOINTS: string[] = [];
 
 function toErrorMessage(error: unknown): string {
   if (error instanceof Error && error.message.trim()) {
@@ -34,6 +36,22 @@ export function useTranscribeData() {
   const companiesQuery = useCompaniesQuery(getToken);
   const companies = companiesQuery.data ?? [];
   const searchState = useTranscribeSearchState(companies);
+  const { setFilters } = searchState;
+  const statusCheckpointsQuery = useStatusCheckpointsQuery(getToken, searchState.company);
+  const statusCheckpoints = statusCheckpointsQuery.data ?? EMPTY_STATUS_CHECKPOINTS;
+  const selectedStatusCheckpoint = searchState.filters.statusCheckpoint;
+
+  useEffect(() => {
+    if (!selectedStatusCheckpoint) {
+      return;
+    }
+    if (!statusCheckpoints.includes(selectedStatusCheckpoint)) {
+      setFilters((current) => ({
+        ...current,
+        statusCheckpoint: "",
+      }));
+    }
+  }, [selectedStatusCheckpoint, setFilters, statusCheckpoints]);
 
   const { logs, logsQuery, detail, detailQuery } = useTranscribeQueries({
     getToken,
@@ -107,6 +125,8 @@ export function useTranscribeData() {
   return {
     companies,
     companiesQuery,
+    statusCheckpoints,
+    statusCheckpointsQuery,
     logs,
     logsQuery,
     detail,

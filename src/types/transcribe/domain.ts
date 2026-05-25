@@ -48,4 +48,5 @@ export type LogDetail = {
 export type LogFilters = {
   startDate: string;
   endDate: string;
+  statusCheckpoint: string;
 };

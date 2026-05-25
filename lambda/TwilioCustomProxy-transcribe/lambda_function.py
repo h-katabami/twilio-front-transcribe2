@@ -171,6 +171,7 @@ def _list_logs(event):
     """GET /logs?company=...&startDate=YYYY-MM-DD&endDate=YYYY-MM-DD"""
     params = _query_params(event)
     company = str(params.get("company") or "").strip()
+    status_checkpoint = str(params.get("statusCheckpoint") or "").strip()
     if not company:
         return _error(400, "company は必須です")
 
@@ -178,8 +179,50 @@ def _list_logs(event):
     if error:
         return error
 
+    if status_checkpoint:
+        items = _filter_items_by_status_checkpoint(items, status_checkpoint)
+
     summaries = [_to_log_summary(item, company) for item in items]
     return _response(200, {"items": summaries})
+
+
+def _list_status_checkpoints(event):
+    """GET /status-checkpoints?company=..."""
+    params = _query_params(event)
+    company = str(params.get("company") or "").strip()
+    if not company:
+        return _error(400, "company は必須です")
+
+    result = table.get_item(Key={
+        "PK": f"CompanyName#{company}",
+        "SK": "ScenarioName#本番",
+    })
+    item = result.get("Item") or {}
+    scenario = item.get("scenario") if isinstance(item.get("scenario"), list) else []
+
+    values = []
+    seen = set()
+    for node in scenario:
+        if not isinstance(node, dict):
+            continue
+        value = str(node.get("status_checkpoint") or "").strip()
+        if not value or value in seen:
+            continue
+        seen.add(value)
+        values.append(value)
+
+    return _response(200, {"items": values})
+
+
+def _filter_items_by_status_checkpoint(items, status_checkpoint):
+    value = str(status_checkpoint or "").strip()
+    if not value:
+        return items
+    return [
+        item
+        for item in items
+        if str(item.get("status") or item.get("user_status") or item.get("status_checkpoint") or "").strip() == value
+    ]
 
 
 def _to_history(item):
@@ -281,6 +324,7 @@ def _export_calls_csv(event):
     items, error = _load_logs_items(company, params.get("startDate", ""), params.get("endDate", ""))
     if error:
         return error
+    items = _filter_items_by_status_checkpoint(items, params.get("statusCheckpoint", ""))
 
     call_items = [item for item in items if _is_call_record(item)]
     headers = [
@@ -321,6 +365,7 @@ def _export_transcriptions_csv(event):
     items, error = _load_logs_items(company, params.get("startDate", ""), params.get("endDate", ""))
     if error:
         return error
+    items = _filter_items_by_status_checkpoint(items, params.get("statusCheckpoint", ""))
 
     headers = [
         "cid",
@@ -377,6 +422,9 @@ def lambda_handler(event, context):
 
     if path == "logs" and method == "GET":
         return _list_logs(event)
+
+    if path == "status-checkpoints" and method == "GET":
+        return _list_status_checkpoints(event)
 
     if path == "logs/csv/calls" and method == "GET":
         return _export_calls_csv(event)

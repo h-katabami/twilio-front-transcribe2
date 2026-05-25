@@ -2,6 +2,8 @@ import type { LogFilters } from "../../types/transcribe/domain.ts";
 
 type TranscribeFiltersPanelProps = {
   companies: string[];
+  statusCheckpoints: string[];
+  isLoadingStatusCheckpoints: boolean;
   company: string;
   filters: LogFilters;
   onCompanyChange: (nextCompany: string) => void;
@@ -53,6 +55,25 @@ export function TranscribeFiltersPanel(props: TranscribeFiltersPanelProps) {
               />
             </label>
           </div>
+
+          <label>
+            ステータス
+            <select
+              value={props.filters.statusCheckpoint}
+              onChange={(event) =>
+                props.onFiltersChange({
+                  ...props.filters,
+                  statusCheckpoint: event.target.value,
+                })
+              }
+            >
+              <option value="">{props.isLoadingStatusCheckpoints ? "読み込み中..." : "すべて"}</option>
+              {props.statusCheckpoints.map((statusCheckpoint) => (
+                <option key={statusCheckpoint} value={statusCheckpoint}>{statusCheckpoint}</option>
+              ))}
+            </select>
+          </label>
+
           <button className="search-button" type="button" onClick={props.onSearch}>検索</button>
         </div>
       </section>
