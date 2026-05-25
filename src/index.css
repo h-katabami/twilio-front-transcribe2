@@ -232,11 +232,11 @@ select {
 
 .log-list button {
   width: 100%;
-  border: 1px solid var(--line-soft);
+  border: 1px solid #bdcbd1;
   border-radius: 10px;
   padding: 10px;
   text-align: left;
-  background: #fffef9;
+  background: #ffffff;
   display: grid;
   gap: 4px;
   cursor: pointer;
@@ -509,10 +509,10 @@ select {
 }
 
 .point-item {
-  border: 1px solid var(--line-soft);
+  border: 1px solid #bdcbd1;
   border-radius: 8px;
   padding: 8px;
-  background: #fffef9;
+  background: #ffffff;
 }
 
 .point-head {
