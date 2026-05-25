@@ -17,7 +17,7 @@ function mapCompanyDtoToName(item: { company_name?: string; SK?: string }): stri
   return sk.startsWith("CompanyName#") ? sk.split("#", 2)[1] || "" : "";
 }
 
-export function useApi() {
+export function useApiCommon() {
   const fetchCompanies = async (token: string | null): Promise<string[]> => {
     const headers = new Headers();
     headers.set("Content-Type", "application/json");

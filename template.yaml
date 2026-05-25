@@ -1,0 +1,97 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: twilio-front-transcribe2 backend (Lambda + API Gateway)
+
+Parameters:
+  EnvironmentName:
+    Type: String
+    Default: dev
+  FunctionName:
+    Type: String
+    Default: TwilioCustomProxy-transcribe
+  StageName:
+    Type: String
+    Default: dev
+  TranscribeTableName:
+    Type: String
+  TranscribeLogsIndexName:
+    Type: String
+    Default: ManagementScreenIndexV2
+  TranscribeExportBucket:
+    Type: String
+  TranscribeExportPrefix:
+    Type: String
+    Default: company
+  TranscribeExportUrlExpires:
+    Type: Number
+    Default: 900
+
+Globals:
+  Function:
+    Runtime: python3.12
+    Timeout: 30
+    MemorySize: 256
+    Architectures:
+      - x86_64
+
+Resources:
+  TwilioCustomProxyApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: !Sub '${FunctionName}-${EnvironmentName}-api'
+      StageName: !Ref StageName
+      Cors:
+        AllowMethods: "'GET,PUT,OPTIONS'"
+        AllowHeaders: "'Content-Type,Authorization'"
+        AllowOrigin: "'*'"
+
+  TwilioCustomProxyFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub '${FunctionName}-${EnvironmentName}'
+      CodeUri: lambda/TwilioCustomProxy-transcribe/
+      Handler: lambda_function.lambda_handler
+      Environment:
+        Variables:
+          TRANSCRIBE_TABLE_NAME: !Ref TranscribeTableName
+          TRANSCRIBE_LOGS_INDEX_NAME: !Ref TranscribeLogsIndexName
+          TRANSCRIBE_EXPORT_BUCKET: !Ref TranscribeExportBucket
+          TRANSCRIBE_EXPORT_PREFIX: !Ref TranscribeExportPrefix
+          TRANSCRIBE_EXPORT_URL_EXPIRES: !Ref TranscribeExportUrlExpires
+      Policies:
+        - Statement:
+            - Sid: DynamoRead
+              Effect: Allow
+              Action:
+                - dynamodb:GetItem
+                - dynamodb:Query
+              Resource:
+                - !Sub 'arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${TranscribeTableName}'
+                - !Sub 'arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${TranscribeTableName}/index/${TranscribeLogsIndexName}'
+            - Sid: S3Export
+              Effect: Allow
+              Action:
+                - s3:PutObject
+                - s3:GetObject
+              Resource: !Sub 'arn:aws:s3:::${TranscribeExportBucket}/*'
+      Events:
+        ProxyRoot:
+          Type: Api
+          Properties:
+            RestApiId: !Ref TwilioCustomProxyApi
+            Path: /services/transcribe
+            Method: ANY
+        ProxyAny:
+          Type: Api
+          Properties:
+            RestApiId: !Ref TwilioCustomProxyApi
+            Path: /services/transcribe/{proxy+}
+            Method: ANY
+
+Outputs:
+  ApiBaseUrl:
+    Description: API Gateway base URL
+    Value: !Sub 'https://${TwilioCustomProxyApi}.execute-api.${AWS::Region}.amazonaws.com/${StageName}'
+  FunctionArn:
+    Description: Lambda ARN
+    Value: !GetAtt TwilioCustomProxyFunction.Arn

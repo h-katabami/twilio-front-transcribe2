@@ -9,11 +9,11 @@ from zoneinfo import ZoneInfo
 import boto3
 from boto3.dynamodb.conditions import Key
 
-TABLE_NAME = os.getenv("TRANSCRIBE_TABLE_NAME", "TestTwilioFlow-MainTable-S5QH2KQ9XG4N")
-LOGS_INDEX_NAME = os.getenv("TRANSCRIBE_LOGS_INDEX_NAME", "ManagementScreenIndexV2")
+TABLE_NAME = os.getenv("TRANSCRIBE_TABLE_NAME")
+LOGS_INDEX_NAME = os.getenv("TRANSCRIBE_LOGS_INDEX_NAME")
 EXPORT_BUCKET_NAME = os.getenv("TRANSCRIBE_EXPORT_BUCKET", "transcribe-csv")
 EXPORT_PREFIX = os.getenv("TRANSCRIBE_EXPORT_PREFIX", "company")
-EXPORT_URL_EXPIRES = int(os.getenv("TRANSCRIBE_EXPORT_URL_EXPIRES", "900"))
+EXPORT_URL_EXPIRES = int(os.getenv("TRANSCRIBE_EXPORT_URL_EXPIRES"))
 JST = ZoneInfo("Asia/Tokyo")
 
 dynamodb = boto3.resource("dynamodb")

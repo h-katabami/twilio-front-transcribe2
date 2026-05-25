@@ -172,7 +172,7 @@ function extractDownloadUrl(payload: CsvDownloadResponseDto): string {
   return url;
 }
 
-export function useProxyApi() {
+export function useApiProxy() {
   const fetchLogs = async (token: string | null, company: string, filters: LogFilters): Promise<LogSummary[]> => {
     const params = createLogsParams(company, filters);
 

@@ -6,14 +6,19 @@ function required(key: keyof ImportMetaEnv): string {
   return value;
 }
 
+function normalizeCookiePath(value: string): string {
+  const trimmed = value.replace(/^\/+|\/+$/g, "");
+  return trimmed ? `/${trimmed}` : "/";
+}
+
 export const env = {
-  pathText: String(import.meta.env.VITE_PATH_TEXT ?? "").replace(/^\/+|\/+$/g, ""),
-  authRegion: required("VITE_AUTH_REGION"),
-  authUserPoolId: required("VITE_AUTH_USER_POOL_ID"),
-  authUserPoolWebClientId: required("VITE_AUTH_USER_POOL_WEB_CLIENT_ID"),
-  authCookieStorageDomain: required("VITE_AUTH_COOKIE_STORAGE_DOMAIN"),
-  apiBaseUrl: required("VITE_API_BASE_URL").replace(/\/+$/g, ""),
-  proxyBaseUrl: required("VITE_PROXY_BASE_URL").replace(/\/+$/g, ""),
+  pathText: String(import.meta.env.FRONT_PATH ?? "").replace(/^\/+|\/+$/g, ""),
+  authUserPoolId: required("FRONT_AUTH_USER_POOL_ID"),
+  authUserPoolWebClientId: required("FRONT_AUTH_USER_POOL_WEB_CLIENT_ID"),
+  authDomain: required("FRONT_DOMAIN"),
+  authPath: normalizeCookiePath(required("FRONT_PATH")),
+  apiBaseUrl: required("API_COMMON_PATH").replace(/\/+$/g, ""),
+  proxyBaseUrl: required("API_PROXY_PATH").replace(/\/+$/g, ""),
 };
 
 export function useEnv() {

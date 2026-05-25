@@ -21,7 +21,7 @@ export function SignInPage() {
     setLoading(false);
 
     if (!result.success) {
-      setErrorMessage("エラーが発生しました");
+      setErrorMessage(result.message || "エラーが発生しました");
       return;
     }
 

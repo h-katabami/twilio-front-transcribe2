@@ -1,6 +1,6 @@
 import { useState } from "react";
+import { useApiProxy } from "../useApiProxy";
 import { useAuth } from "../useAuth";
-import { useProxyApi } from "../useProxyApi";
 import { useCompaniesQuery, useTranscribeQueries } from "./useTranscribeQueries";
 import { useTranscribeSearchState } from "./useTranscribeSearchState";
 
@@ -24,7 +24,7 @@ function triggerDownload(url: string): void {
 }
 
 export function useTranscribeData() {
-  const { fetchCallsCsvDownloadUrl, fetchTranscriptionsCsvDownloadUrl } = useProxyApi();
+  const { fetchCallsCsvDownloadUrl, fetchTranscriptionsCsvDownloadUrl } = useApiProxy();
   const { getToken } = useAuth();
   const [selectedCallSid, setSelectedCallSid] = useState("");
   const [downloadError, setDownloadError] = useState("");

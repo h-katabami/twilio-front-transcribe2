@@ -159,6 +159,12 @@
 ## 13. 今後課題（UI/UXと画面分割）
 - 次フェーズで検討する課題は [docs/future-tasks-ui-ux.md](docs/future-tasks-ui-ux.md) を参照する。
 
+## 14. SAM / CI-CD 導入物
+- SAM テンプレート: [template.yaml](template.yaml)
+- CI ワークフロー: [.github/workflows/ci.yml](.github/workflows/ci.yml)
+- デプロイワークフロー(dev/prod ブランチ連動): [.github/workflows/deploy-dev.yml](.github/workflows/deploy-dev.yml)
+- Parameter Store 登録項目(アカウント分離・env なしパス): [docs/parameter-store-dev.md](docs/parameter-store-dev.md)
+
 ---
 
 本書は実装開始前の合意文書です。構成を変更する場合は、先にこの文書を更新してから実装に入ります。

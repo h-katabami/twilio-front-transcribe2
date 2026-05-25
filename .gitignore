@@ -10,6 +10,11 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+build
+coverage
+.vite
+.eslintcache
+.aws-sam
 *.zip
 *.tsbuildinfo
 *.local

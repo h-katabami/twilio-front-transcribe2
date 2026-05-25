@@ -1,15 +1,14 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-	readonly VITE_PATH_TEXT: string;
-	readonly VITE_AUTH_REGION: string;
-	readonly VITE_AUTH_USER_POOL_ID: string;
-	readonly VITE_AUTH_USER_POOL_WEB_CLIENT_ID: string;
-	readonly VITE_AUTH_COOKIE_STORAGE_DOMAIN: string;
-	readonly VITE_API_BASE_URL: string;
-	readonly VITE_PROXY_BASE_URL: string;
-	readonly VITE_DEPLOY_S3_BUCKET?: string;
-	readonly CLOUDFRONT_DISTRIBUTION_ID?: string;
+	readonly DEPLOY_AWS_PROFILE?: string;
+	readonly FRONT_AUTH_USER_POOL_ID: string;
+	readonly FRONT_AUTH_USER_POOL_WEB_CLIENT_ID: string;
+	readonly FRONT_DOMAIN: string;
+	readonly FRONT_PATH: string;
+	readonly FRONT_CLOUDFRONT_DISTRIBUTION_ID?: string;
+	readonly API_COMMON_PATH: string;
+	readonly API_PROXY_PATH: string;
 }
 
 interface ImportMeta {

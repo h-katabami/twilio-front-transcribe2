@@ -7,15 +7,13 @@ dotenv.config({ path: path.resolve(process.cwd(), envFile) });
 
 const command = process.argv[2];
 
-const bucket = process.env.VITE_DEPLOY_S3_BUCKET || process.env.VITE_AUTH_COOKIE_STORAGE_DOMAIN;
-const prefixSource = process.env.VITE_PATH_TEXT;
+const bucket = process.env.FRONT_DOMAIN;
+const prefixSource = process.env.FRONT_PATH;
 
-const required = ["AWS_PROFILE", "CLOUDFRONT_DISTRIBUTION_ID"];
+const required = ["DEPLOY_AWS_PROFILE", "FRONT_DOMAIN", "FRONT_CLOUDFRONT_DISTRIBUTION_ID", "FRONT_PATH"];
 
 const missing = [
   ...required.filter((key) => !process.env[key]),
-  ...(bucket ? [] : ["VITE_DEPLOY_S3_BUCKET or VITE_AUTH_COOKIE_STORAGE_DOMAIN"]),
-  ...(prefixSource ? [] : ["VITE_PATH_TEXT"]),
 ];
 
 if (missing.length > 0) {
@@ -23,9 +21,9 @@ if (missing.length > 0) {
   process.exit(1);
 }
 
-const profile = process.env.AWS_PROFILE;
+const profile = process.env.DEPLOY_AWS_PROFILE;
 const prefix = prefixSource.replace(/^\/+|\/+$/g, "");
-const distributionId = process.env.CLOUDFRONT_DISTRIBUTION_ID;
+const distributionId = process.env.FRONT_CLOUDFRONT_DISTRIBUTION_ID;
 const invalidatePath = `/${prefix}/*`;
 const s3Destination = prefix ? `s3://${bucket}/${prefix}` : `s3://${bucket}`;
 

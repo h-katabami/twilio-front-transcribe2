@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import type { LogFilters } from "../../types/transcribe/domain.ts";
-import { useApi } from "../useApi";
-import { useProxyApi } from "../useProxyApi";
+import { useApiCommon } from "../useApiCommon";
+import { useApiProxy } from "../useApiProxy";
 
 type UseTranscribeQueriesParams = {
   getToken: () => Promise<string | null>;
@@ -11,7 +11,7 @@ type UseTranscribeQueriesParams = {
 };
 
 export function useCompaniesQuery(getToken: () => Promise<string | null>) {
-  const { fetchCompanies } = useApi();
+  const { fetchCompanies } = useApiCommon();
 
   return useQuery({
     queryKey: ["companies"] as const,
@@ -21,7 +21,7 @@ export function useCompaniesQuery(getToken: () => Promise<string | null>) {
 }
 
 export function useTranscribeQueries(params: UseTranscribeQueriesParams) {
-  const { fetchLogs, fetchLogDetail } = useProxyApi();
+  const { fetchLogs, fetchLogDetail } = useApiProxy();
   const { getToken, appliedCompany, appliedFilters, selectedCallSid } = params;
   const hasAppliedCompany = Boolean(appliedCompany);
   const hasSelectedCallSid = Boolean(selectedCallSid);
