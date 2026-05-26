@@ -9,11 +9,11 @@ from zoneinfo import ZoneInfo
 import boto3
 from boto3.dynamodb.conditions import Key
 
-TABLE_NAME = os.getenv("TRANSCRIBE_TABLE_NAME")
-LOGS_INDEX_NAME = os.getenv("TRANSCRIBE_LOGS_INDEX_NAME")
-EXPORT_BUCKET_NAME = os.getenv("TRANSCRIBE_EXPORT_BUCKET")
-EXPORT_PREFIX = os.getenv("TRANSCRIBE_EXPORT_PREFIX")
-EXPORT_URL_EXPIRES = int(os.getenv("TRANSCRIBE_EXPORT_URL_EXPIRES"))
+TABLE_NAME = os.getenv("MAIN_TABLE")
+LOGS_INDEX_NAME = os.getenv("TABLE_INDEX")
+EXPORT_BUCKET_NAME = os.getenv("EXPORT_BUCKET")
+EXPORT_PREFIX = "company"
+EXPORT_URL_EXPIRES = int(os.getenv("EXPORT_URL_EXPIRES"))
 JST = ZoneInfo("Asia/Tokyo")
 
 dynamodb = boto3.resource("dynamodb")
@@ -283,7 +283,7 @@ def _render_csv(headers, rows):
 
 def _export_csv_to_s3(csv_text, company, kind):
     if not EXPORT_BUCKET_NAME:
-        return None, _error(500, "TRANSCRIBE_EXPORT_BUCKET が設定されていません")
+        return None, _error(500, "EXPORT_BUCKET が設定されていません")
 
     now = datetime.now(JST)
     timestamp = now.strftime("%Y%m%d_%H%M%S")

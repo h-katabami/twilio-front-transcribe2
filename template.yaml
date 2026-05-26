@@ -8,20 +8,19 @@ Parameters:
     Default: dev
   FunctionName:
     Type: String
-    Default: TwilioCustomProxy-transcribe
+    Default: TwilioCustomProxy-Transcribe
   StageName:
     Type: String
     Default: dev
   TranscribeTableName:
-    Type: String
+    Type: AWS::SSM::Parameter::Value<String>
+    Default: /dynamodb/main-table
   TranscribeLogsIndexName:
     Type: String
     Default: ManagementScreenIndexV2
   TranscribeExportBucket:
     Type: String
-  TranscribeExportPrefix:
-    Type: String
-    Default: company
+    Default: transcribe-csv
   TranscribeExportUrlExpires:
     Type: Number
     Default: 900
@@ -35,43 +34,19 @@ Globals:
       - x86_64
 
 Resources:
-  TwilioCustomProxyApi:
-    Type: AWS::Serverless::Api
-    Properties:
-      Name: !Sub '${FunctionName}-${EnvironmentName}-api'
-      StageName: !Ref StageName
-      Cors:
-        AllowMethods: "'GET,PUT,OPTIONS'"
-        AllowHeaders: "'Content-Type,Authorization'"
-        AllowOrigin: "'*'"
-
   TwilioCustomProxyFunction:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: !Ref FunctionName
-      CodeUri: lambda/TwilioCustomProxy-transcribe/
+      CodeUri: lambda/TwilioCustomProxy-Transcribe/
       Handler: lambda_function.lambda_handler
       Role: !GetAtt TwilioCustomProxyFunctionRole.Arn
       Environment:
         Variables:
-          TRANSCRIBE_TABLE_NAME: !Ref TranscribeTableName
-          TRANSCRIBE_LOGS_INDEX_NAME: !Ref TranscribeLogsIndexName
-          TRANSCRIBE_EXPORT_BUCKET: !Ref TranscribeExportBucket
-          TRANSCRIBE_EXPORT_PREFIX: !Ref TranscribeExportPrefix
-          TRANSCRIBE_EXPORT_URL_EXPIRES: !Ref TranscribeExportUrlExpires
-      Events:
-        ProxyRoot:
-          Type: Api
-          Properties:
-            RestApiId: !Ref TwilioCustomProxyApi
-            Path: /services/transcribe
-            Method: ANY
-        ProxyAny:
-          Type: Api
-          Properties:
-            RestApiId: !Ref TwilioCustomProxyApi
-            Path: /services/transcribe/{proxy+}
-            Method: ANY
+          MAIN_TABLE: !Ref TranscribeTableName
+          TABLE_INDEX: !Ref TranscribeLogsIndexName
+          EXPORT_BUCKET: !Ref TranscribeExportBucket
+          EXPORT_URL_EXPIRES: !Ref TranscribeExportUrlExpires
 
   TwilioCustomProxyFunctionRole:
     Type: AWS::IAM::Role
@@ -107,9 +82,6 @@ Resources:
                 Resource: !Sub 'arn:aws:s3:::${TranscribeExportBucket}/*'
 
 Outputs:
-  ApiBaseUrl:
-    Description: API Gateway base URL
-    Value: !Sub 'https://${TwilioCustomProxyApi}.execute-api.${AWS::Region}.amazonaws.com/${StageName}'
   FunctionArn:
     Description: Lambda ARN
     Value: !GetAtt TwilioCustomProxyFunction.Arn

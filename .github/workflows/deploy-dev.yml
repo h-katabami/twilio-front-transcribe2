@@ -95,7 +95,6 @@ jobs:
             "/front/cloudfront-distribution-id"
             "/api/common-path"
             "/api/proxy-path"
-            "/dynamodb/main-table"
           )
 
           json=$(aws ssm get-parameters --with-decryption --names "${names[@]}" --region "$AWS_REGION")
@@ -112,11 +111,6 @@ jobs:
             echo "API_COMMON_PATH=$(get_value "/api/common-path")"
             echo "API_PROXY_PATH=$(get_value "/api/proxy-path")"
             echo "FRONT_CLOUDFRONT_DISTRIBUTION_ID=$(get_value "/front/cloudfront-distribution-id")"
-            echo "TRANSCRIBE_TABLE_NAME=$(get_value "/dynamodb/main-table")"
-            echo "TRANSCRIBE_LOGS_INDEX_NAME=ManagementScreenIndexV2"
-            echo "TRANSCRIBE_EXPORT_BUCKET=transcribe-csv"
-            echo "TRANSCRIBE_EXPORT_PREFIX=company"
-            echo "TRANSCRIBE_EXPORT_URL_EXPIRES=900"
           } >> "$GITHUB_ENV"
 
       - name: Install dependencies
@@ -157,10 +151,5 @@ jobs:
             --no-fail-on-empty-changeset \
             --parameter-overrides \
               EnvironmentName="$APP_ENV" \
-              FunctionName=TwilioCustomProxy-transcribe \
-              StageName="$APP_ENV" \
-              TranscribeTableName="$TRANSCRIBE_TABLE_NAME" \
-              TranscribeLogsIndexName="$TRANSCRIBE_LOGS_INDEX_NAME" \
-              TranscribeExportBucket=transcribe-csv \
-              TranscribeExportPrefix=company \
-              TranscribeExportUrlExpires=900
+              FunctionName=TwilioCustomProxy-Transcribe \
+              StageName="$APP_ENV"

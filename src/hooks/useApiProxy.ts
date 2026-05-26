@@ -101,7 +101,7 @@ type CsvDownloadResponseDto = {
 };
 
 function serviceUrl(path: string): string {
-  return `${env.proxyBaseUrl}/services/transcribe/${path}`;
+  return `${env.proxyBaseUrl}/services/Transcribe/${path}`;
 }
 
 function mapLogSummary(dto: LogSummaryPayload): LogSummary {
